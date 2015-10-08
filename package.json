@@ -1,0 +1,13 @@
+{
+  "name": "@aredridel/paired-promises",
+  "version": "1.0.0",
+  "description": "A mini promise implementation to see how the sausage is made",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test.js"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "tap": "^2.1.0"
+  }
+}
