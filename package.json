@@ -9,5 +9,14 @@
   "license": "ISC",
   "devDependencies": {
     "tap": "^2.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aredridel/paired-promises.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/aredridel/paired-promises/issues"
+  },
+  "homepage": "https://github.com/aredridel/paired-promises#readme"
 }
