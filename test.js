@@ -104,3 +104,19 @@ tap.test('Promises can be dereferened later', function (t) {
         });
     });
 });
+
+tap.test('Promises can be chained with then', function (t) {
+    t.plan(2);
+
+    var p = new P(function (y, n) {
+        y('It works!');
+    });
+
+    p.then(function (success) {
+        t.equal(success, 'It works!');
+        return "New value";
+    }).then(function (success) {
+        t.equal(success, "New value");
+        t.end();
+    });
+});
