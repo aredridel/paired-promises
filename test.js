@@ -120,3 +120,19 @@ tap.test('Promises can be chained with then', function (t) {
         t.end();
     });
 });
+
+tap.test('Promises resolve when their value is zero.', function (t) {
+    t.plan(2);
+
+    var p = new P(function (y, n) {
+        y(0);
+    });
+
+    p.then(function (success) {
+        t.equal(success, 0);
+        p.then(function (success) {
+            t.equal(success, 0);
+            t.end();
+        });
+    });
+});

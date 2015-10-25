@@ -126,14 +126,14 @@ P.prototype = {
         // call its callback immediately. We just call our resolve helper
         // method with that value, just as if the value was coming in for the
         // first time. It'll fire any waiting watchers.
-        if (this.value) {
+        if (this.value != null) {
             this.resolve(this.value);
         }
 
         // `this.value` and `this.error` can't both be things at the same time,
         // but here we reject if there was a waiting error. Either this or the
         // resolve above will happen, not both.
-        if (this.error) {
+        if (this.error != null) {
             this.reject(this.error);
         }
 
